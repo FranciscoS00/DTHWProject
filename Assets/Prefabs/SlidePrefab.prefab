@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   square: {fileID: 5402361024488859523}
   hoop: {fileID: 4734494238620362634}
+  mainParent: {fileID: 3339018173086882182}
 --- !u!50 &5841942054556771880
 Rigidbody2D:
   serializedVersion: 4

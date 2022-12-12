@@ -13,7 +13,7 @@ public class ballPressing : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, 2.0f);
+        Destroy(gameObject, globalVars.liveSpeed);
     }
 
     private void OnDestroy()

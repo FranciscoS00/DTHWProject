@@ -7,6 +7,7 @@ public class ballDrag : MonoBehaviour
     // The plane the object is currently being dragged on
     private Plane dragPlane;
     public Collider2D square, hoop;
+    public GameObject mainParent;
 
     // The difference between where the mouse is on the drag plane and 
     // where the origin of the object is on the drag plane
@@ -17,6 +18,7 @@ public class ballDrag : MonoBehaviour
     void Start()
     {
         myMainCamera = Camera.main; // Camera.main is expensive ; cache it here
+        Destroy(mainParent, globalVars.liveSpeed);
     }
 
     void OnMouseDown()
@@ -42,7 +44,8 @@ public class ballDrag : MonoBehaviour
     {
         if(collision == hoop)
         {
-            Debug.Log("touched hoop");
+            globalVars.last10Score = globalVars.last10Score + 1;
+            Destroy(gameObject);
         }
     }
 
@@ -50,7 +53,12 @@ public class ballDrag : MonoBehaviour
     {
         if (collision == square)
         {
-            Debug.Log("left path");
+            Destroy(mainParent);
         }
+    }
+
+    private void OnDestroy()
+    {
+        globalVars.last10 = globalVars.last10 + 1;
     }
 }
