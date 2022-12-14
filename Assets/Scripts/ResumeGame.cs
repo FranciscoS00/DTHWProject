@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ResumeGame : MonoBehaviour
 {
+    public GameObject pauseMenu;
     void Start()
     {
         Button btn = gameObject.GetComponent<Button>();
@@ -12,5 +13,6 @@ public class ResumeGame : MonoBehaviour
     void Resume()
     {
         Time.timeScale = 1;
+        pauseMenu.SetActive(false);
     }
 }
