@@ -22,10 +22,9 @@ public class changeScene : MonoBehaviour
 
     public void ModifyScene()
     {
-        if(goToScene == null || goToScene == "")
+        if(goToScene != null && goToScene != "")
         {
-            goToScene = "Intro";
+            SceneManager.LoadScene(goToScene, LoadSceneMode.Single);
         }
-        SceneManager.LoadScene(goToScene, LoadSceneMode.Single);
     }
 }
