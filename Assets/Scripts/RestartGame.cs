@@ -21,5 +21,6 @@ public class RestartGame : MonoBehaviour
         globalVars.tries = 1;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
+        Time.timeScale = 1;
     }
 }

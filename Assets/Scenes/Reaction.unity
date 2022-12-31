@@ -930,6 +930,7 @@ GameObject:
   - component: {fileID: 1593643825}
   - component: {fileID: 1593643824}
   - component: {fileID: 1593643826}
+  - component: {fileID: 1593643827}
   m_Layer: 0
   m_Name: Global
   m_TagString: Untagged
@@ -978,6 +979,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickPrefab: {fileID: 7569180891941275911, guid: 11e0ec41918511d41b4fc252bf564926, type: 3}
   slidePrefab: {fileID: 3339018173086882182, guid: 9e23bcc24058fec429c8201ab3614ae7, type: 3}
+--- !u!114 &1593643827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593643823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be1889df8dc8e346aa17f61ab2ec250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1731988938
 GameObject:
   m_ObjectHideFlags: 0

@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Intro
+  goToScene: MinigameMenu
   isExit: 0
 --- !u!1 &1839213743299974401
 GameObject:
