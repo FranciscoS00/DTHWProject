@@ -54,7 +54,6 @@ public class mazeBall : MonoBehaviour
         if(collision.gameObject.tag == "Barrier") //MazePath need to have the "Barrier" tag
         {
             //here you can add what it should do when it hits the wall
-            globalVars.tries++;
             GameObject newPrefab = Instantiate(gameObject, originalPos, Quaternion.identity);
             if(gameObject.transform.localScale.x > 0.06)
             {
