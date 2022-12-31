@@ -8,10 +8,10 @@ public class changeText : MonoBehaviour
 
     void Start()
     {
-        m_Object.text = "Nível " + globalVars.level.ToString();
+        m_Object.text = "NÃ­vel " + globalVars.level.ToString();
     }
     private void Update()
     {
-        m_Object.text = "Nível " + globalVars.level.ToString();
+        m_Object.text = "NÃ­vel " + globalVars.level.ToString();
     }
 }

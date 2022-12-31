@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class mazeBall : MonoBehaviour
 {
@@ -64,7 +65,8 @@ public class mazeBall : MonoBehaviour
         }else if(collision.gameObject.tag == "Win") //MazeHoop needs to have the "Win" tag
         {
             //add whatever you want to happen when you touch the hoop (final)
-            Debug.Log("ganhei");
+            //Debug.Log("ganhei");
+            SceneManager.LoadScene("ResultsMenu", LoadSceneMode.Single);
         }
     }
 }

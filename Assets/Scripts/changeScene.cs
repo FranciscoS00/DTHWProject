@@ -10,6 +10,7 @@ public class changeScene : MonoBehaviour
     [SerializeField]
     bool isExit = false;
     public int chosenLevel = -1;
+    public int isDynamicLevel = 0;
 
     void Start()
     {
@@ -22,7 +23,11 @@ public class changeScene : MonoBehaviour
     {
         globalVars.spawnSpeed = 1.0f;
         globalVars.liveSpeed = 2.0f;
-        if(chosenLevel != -1)
+        if(isDynamicLevel == 2)
+        {
+            globalVars.level = globalVars.level + 1;
+        }
+        else if(chosenLevel != -1)
         {
             globalVars.level = chosenLevel;
         }
@@ -40,7 +45,11 @@ public class changeScene : MonoBehaviour
         }
         if (goToScene != null && goToScene != "")
         {
-            if(chosenLevel != -1 && goToScene == "Maze")
+            if(isDynamicLevel != 0)
+            {
+                SceneManager.LoadScene(goToScene+globalVars.level, LoadSceneMode.Single);
+            }
+            else if(chosenLevel != -1 && goToScene == "Maze")
             {
                 SceneManager.LoadScene(goToScene+chosenLevel, LoadSceneMode.Single);
             }
