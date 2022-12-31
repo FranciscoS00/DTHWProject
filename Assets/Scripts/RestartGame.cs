@@ -18,6 +18,7 @@ public class RestartGame : MonoBehaviour
         globalVars.level = 1;
         globalVars.last10 = 0;
         globalVars.last10Score = 0;
+        globalVars.tries = 0;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
