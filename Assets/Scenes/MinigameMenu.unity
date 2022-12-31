@@ -314,6 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goToScene: Reaction
   isExit: 0
+  chosenLevel: 1
 --- !u!114 &194964502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goToScene: Intro
   isExit: 0
+  chosenLevel: -1
 --- !u!114 &308249658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,6 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goToScene: MazeLevelMenu
   isExit: 0
+  chosenLevel: -1
 --- !u!1 &1078297232
 GameObject:
   m_ObjectHideFlags: 0

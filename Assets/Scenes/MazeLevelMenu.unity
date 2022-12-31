@@ -467,8 +467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 8
 --- !u!114 &294837920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -986,8 +987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 9
 --- !u!114 &441257857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2063,8 +2065,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 10
 --- !u!114 &823059102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2316,8 +2319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 1
 --- !u!1 &833176885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,8 +2953,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 4
 --- !u!114 &1076115212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,8 +3330,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 3
 --- !u!114 &1094077707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3481,8 +3487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 6
 --- !u!114 &1095374822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4399,6 +4406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goToScene: MinigameMenu
   isExit: 0
+  chosenLevel: -1
 --- !u!114 &1416855174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5220,8 +5228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 7
 --- !u!114 &1867074579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5680,8 +5689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 5
 --- !u!114 &2000615677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6064,8 +6074,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fab93363404b443908aa97f99b3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goToScene: Maze 1
+  goToScene: Maze
   isExit: 0
+  chosenLevel: 2
 --- !u!114 &2137105093
 MonoBehaviour:
   m_ObjectHideFlags: 0
