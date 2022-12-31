@@ -7,10 +7,13 @@ public class mazeBall : MonoBehaviour
     // The plane the object is currently being dragged on
     private Plane dragPlane;
     public GameObject mainParent;
+    public GameObject pauseMenu;
+    public GameObject newPrefabBall;
 
     // The difference between where the mouse is on the drag plane and 
     // where the origin of the object is on the drag plane
     private Vector3 offset;
+    private Vector3 originalPos;
 
     private Camera myMainCamera;
 
@@ -18,25 +21,32 @@ public class mazeBall : MonoBehaviour
     {
         myMainCamera = Camera.main; // Camera.main is expensive ; cache it here
         Destroy(mainParent, globalVars.liveSpeed);
+        originalPos = gameObject.transform.position;
     }
 
     void OnMouseDown()
     {
-        dragPlane = new Plane(myMainCamera.transform.forward, transform.position);
-        Ray camRay = myMainCamera.ScreenPointToRay(Input.mousePosition);
+        if(!pauseMenu.activeSelf)
+        {
+            dragPlane = new Plane(myMainCamera.transform.forward, transform.position);
+            Ray camRay = myMainCamera.ScreenPointToRay(Input.mousePosition);
 
-        float planeDist;
-        dragPlane.Raycast(camRay, out planeDist);
-        offset = transform.position - camRay.GetPoint(planeDist);
+            float planeDist;
+            dragPlane.Raycast(camRay, out planeDist);
+            offset = transform.position - camRay.GetPoint(planeDist);
+        }
     }
 
     void OnMouseDrag()
     {
-        Ray camRay = myMainCamera.ScreenPointToRay(Input.mousePosition);
+        if(!pauseMenu.activeSelf)
+        {
+            Ray camRay = myMainCamera.ScreenPointToRay(Input.mousePosition);
 
-        float planeDist;
-        dragPlane.Raycast(camRay, out planeDist);
-        transform.position = camRay.GetPoint(planeDist) + offset;
+            float planeDist;
+            dragPlane.Raycast(camRay, out planeDist);
+            transform.position = camRay.GetPoint(planeDist) + offset;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,6 +54,11 @@ public class mazeBall : MonoBehaviour
         if(collision.gameObject.tag == "Barrier") //MazePath need to have the "Barrier" tag
         {
             //here you can add what it should do when it hits the wall
+            GameObject newPrefab = Instantiate(gameObject, originalPos, Quaternion.identity);
+            if(gameObject.transform.localScale.x > 0.06)
+            {
+                newPrefab.transform.localScale = gameObject.transform.localScale - new Vector3(0.01f,0.01f,0);
+            }
             Destroy(gameObject);
         }else if(collision.gameObject.tag == "Win") //MazeHoop needs to have the "Win" tag
         {
