@@ -12,17 +12,17 @@ public class changeScene : MonoBehaviour
 
     void Start()
     {
-        if(isExit)
-        {
-            Application.Quit();
-        }
         Button btn = gameObject.GetComponent<Button>();
         btn.onClick.AddListener(ModifyScene);
     }
 
     public void ModifyScene()
     {
-        if(goToScene != null && goToScene != "")
+        if (isExit)
+        {
+            Application.Quit();
+        }
+        if (goToScene != null && goToScene != "")
         {
             SceneManager.LoadScene(goToScene, LoadSceneMode.Single);
         }
