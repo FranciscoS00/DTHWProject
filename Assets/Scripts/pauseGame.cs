@@ -14,6 +14,7 @@ public class pauseGame : MonoBehaviour
     void Pause()
     {
         Time.timeScale = 0;
+        globalVars.pauseMenuActive = true;
         pauseMenu.SetActive(true);
     }
 }

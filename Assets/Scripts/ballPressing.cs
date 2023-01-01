@@ -7,8 +7,11 @@ public class ballPressing : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        globalVars.last10Score = globalVars.last10Score + 1;
-        Destroy(gameObject);
+        if (globalVars.pauseMenuActive == false)
+        {
+            globalVars.last10Score = globalVars.last10Score + 1;
+            Destroy(gameObject);
+        }
     }
 
     void Start()

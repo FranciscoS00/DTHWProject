@@ -39,6 +39,7 @@ public class changeScene : MonoBehaviour
 
     public void ModifyScene()
     {
+        globalVars.pauseMenuActive = false;
         if (isExit)
         {
             Application.Quit();

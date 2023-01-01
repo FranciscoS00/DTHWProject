@@ -13,6 +13,7 @@ public class ResumeGame : MonoBehaviour
     void Resume()
     {
         Time.timeScale = 1;
+        globalVars.pauseMenuActive = false;
         pauseMenu.SetActive(false);
     }
 }
