@@ -9,7 +9,7 @@ public class spawner : MonoBehaviour
     {
         var position = new Vector2(Random.Range(-7.5f, 7.5f), Random.Range(-4.5f, 4.5f));
         Instantiate(clickPrefab, position, Quaternion.identity);
-        InvokeRepeating("spawn", 1f, globalVars.spawnSpeed);
+        InvokeRepeating("spawn", globalVars.spawnSpeed, globalVars.spawnSpeed);
     }
 
     void spawn()
