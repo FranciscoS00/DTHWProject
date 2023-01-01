@@ -14,6 +14,10 @@ public class changeScene : MonoBehaviour
 
     void Start()
     {
+        if(isDynamicLevel == 2 && globalVars.level >= 10)
+        {
+            gameObject.SetActive(false);
+        }
         Button btn = gameObject.GetComponent<Button>();
         btn.onClick.AddListener(RestartData);
         btn.onClick.AddListener(ModifyScene);
