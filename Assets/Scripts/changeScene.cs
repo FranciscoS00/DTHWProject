@@ -21,8 +21,6 @@ public class changeScene : MonoBehaviour
 
     void RestartData()
     {
-        globalVars.spawnSpeed = 1.0f;
-        globalVars.liveSpeed = 2.0f;
         if(isDynamicLevel == 2)
         {
             globalVars.level = globalVars.level + 1;
@@ -31,8 +29,6 @@ public class changeScene : MonoBehaviour
         {
             globalVars.level = chosenLevel;
         }
-        globalVars.last10 = 0;
-        globalVars.last10Score = 0;
         globalVars.tries = 1;
         Time.timeScale = 1;
     }
