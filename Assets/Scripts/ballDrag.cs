@@ -8,6 +8,7 @@ public class ballDrag : MonoBehaviour
     private Plane dragPlane;
     public Collider2D square, hoop;
     public GameObject mainParent;
+    public AudioSource goodSound, badSound;
 
     // The difference between where the mouse is on the drag plane and 
     // where the origin of the object is on the drag plane
@@ -45,6 +46,7 @@ public class ballDrag : MonoBehaviour
         if(collision == hoop)
         {
             globalVars.last10Score = globalVars.last10Score + 1;
+            goodSound.Play();
             Destroy(gameObject);
         }
     }
@@ -53,6 +55,7 @@ public class ballDrag : MonoBehaviour
     {
         if (collision == square)
         {
+            badSound.Play();
             Destroy(mainParent);
         }
     }

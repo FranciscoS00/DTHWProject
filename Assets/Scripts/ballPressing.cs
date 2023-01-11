@@ -5,11 +5,13 @@ using UnityEngine.EventSystems;
 
 public class ballPressing : MonoBehaviour
 {
+    public AudioSource goodSound, badSound;
     private void OnMouseDown()
     {
         if (globalVars.pauseMenuActive == false)
         {
             globalVars.last10Score = globalVars.last10Score + 1;
+            goodSound.Play();
             Destroy(gameObject);
         }
     }
@@ -27,6 +29,7 @@ public class ballPressing : MonoBehaviour
     IEnumerator SelfDestruct()
     {
         yield return new WaitForSeconds(globalVars.liveSpeed);
+        badSound.Play();
         Destroy(gameObject);
     }
 }
